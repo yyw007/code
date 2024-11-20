@@ -21,7 +21,7 @@ n_solutions =10  # 目标数量（可自由修改）
 X_range = [(0.001, 1), (1, 1e15), (1, 6)]  # 自变量范围
 X_names = X.columns  # 自变量名称
 target_y_threshold = 22.5  # 目标y值的阈值
-target_y_high = 27  #
+target_y_high = 35  #
 solutions = []  # 存储解决方案
 
 # 读取已保存的解决方案
