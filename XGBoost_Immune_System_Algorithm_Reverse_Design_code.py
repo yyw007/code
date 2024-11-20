@@ -20,7 +20,7 @@ def random_params():
     }
 
 # Parameters for the immune algorithm
-population_size = 10
+population_size = 50
 max_iterations = 20
 
 # Read the original dataset
@@ -78,7 +78,7 @@ n_solutions = 20  # Target number of solutions
 X_range = [(0.001, 1), (1, 1e15), (1, 6)]  # Range for independent variables
 X_names = X.columns  # Names of independent variables
 target_y_threshold = 21.5  # Threshold for target y value
-target_y_high = 27  # Upper limit for target y value
+target_y_high = 35  # Upper limit for target y value
 solutions = []  # Store solutions
 
 # Read saved solutions
