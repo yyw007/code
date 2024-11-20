@@ -16,15 +16,22 @@ hf = h2o.H2OFrame(data)
 train, test = hf.split_frame(ratios=[.8])
 
 # Set predictors and response variables
-predictors = ['total defect density', 'beta_0', 'gap']
+predictors = ['total defect density', 'thickness ', 'gap']
 response = 'eta(%)'
 
 # Use project_name parameter to avoid running the same models multiple times
 project_name = "my_unique_automl_project"
 
-# Run AutoML
-automl = H2OAutoML(max_models=20, seed=1, project_name=project_name, exclude_algos=["StackedEnsemble"])
+# Run AutoML with 5-fold cross-validation
+automl = H2OAutoML(
+    max_models=20, 
+    seed=1, 
+    project_name=project_name, 
+    exclude_algos=["StackedEnsemble"], 
+    nfolds=5  # Specify the number of folds
+)
 automl.train(x=predictors, y=response, training_frame=train)
+
 
 # Get the IDs of all models
 model_ids = list(automl.leaderboard['model_id'].as_data_frame().iloc[:,0])
