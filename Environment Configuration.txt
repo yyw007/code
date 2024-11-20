@@ -1,0 +1,10 @@
+Library       	Name	  		Version	Purpose
+h2o			3.44.0.2	           	Automated machine learning framework
+pandas		1.5.3	   		Data manipulation and analysis
+xgboost		1.7.4	        	Gradient boosting for predictive modeling
+shap		0.42.1	        	Model interpretability using SHAP values
+sklearn		0.0.post1		General machine learning algorithms and utilities
+matplotlib	3.7.3			Data visualization
+numpy		1.24.2			Numerical computation
+python		3.8.16			Programming language
+PyCharm	2022.3			Integrated development environment for code writing and debugging
